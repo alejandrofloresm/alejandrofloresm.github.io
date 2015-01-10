@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAc,CACb,YAAY,CAAE,IAAI,CAIlB,qBAAG,CACF,eAAe,CAAE,IAAI,CACrB,wBAAG,CACF,WAAW,CAAE,iBAAiB,CAC9B,YAAY,CAAE,IAAI",
+"sources": ["link-collection.scss"],
+"names": [],
+"file": "link-collection.css"
+}
