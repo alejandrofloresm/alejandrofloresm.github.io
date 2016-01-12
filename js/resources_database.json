@@ -1,6 +1,158 @@
 {
   "links": [
     {
+      "name": "I made an NES emulator. Here’s what I learned about the original Nintendo.",
+      "link": "https://medium.com/@fogleman/i-made-an-nes-emulator-here-s-what-i-learned-about-the-original-nintendo-2e078c9b28fe#.pyeycnlz2",
+      "description": "Artículo de una persona que desarrollo un emulador de Nintendo, vale la pena ver todo el aprendizaje que tuvo mientras lo desarrollaba.",
+      "type": "link",
+      "category": "Post",
+      "tags": ["Post", "Gráficas computacionales"]
+    },
+    {
+      "name": "WebGL Fundamentals",
+      "link": "http://webglfundamentals.org/",
+      "description": "Fundamentos de WebGL.",
+      "type": "link",
+      "category": "Gráficas computacionales",
+      "tags": ["Post", "Gráficas computacionales"]
+    },
+    {
+      "name": "The Full History Of Board Games",
+      "link": "https://diceygoblin.com/blog/the-full-history-of-board-games/",
+      "description": "Artículo que redacta la historia de los juegos de mesa.",
+      "type": "link",
+      "category": "Post",
+      "tags": ["Post", "Diseño de videojuegos"]
+    },
+    {
+      "name": "THE BIG LIST OF PIXEL ART TOOLS TO CREATE SPRITES FOR YOUR HTML5 GAMES",
+      "link": "http://www.gamepix.com/blog/the-big-list-of-pixel-art-tools-to-create-sprites-for-your-html5-games/",
+      "description": "Listado de herramientas para realizar arte para videojuegos.",
+      "type": "link",
+      "category": "Arte para videojuegos",
+      "tags": ["Arte para videojuegos"]
+    },
+    {
+      "name": "PathFinding.js",
+      "link": "http://qiao.github.io/PathFinding.js/visual/",
+      "description": "Página que muestra como funcionan distintos algoritmos de <i>PathFinding</i>.",
+      "type": "link",
+      "category": "Desarrollo de videojuegos",
+      "tags": ["Gráficas computacionales", "Desarrollo de videojuegos"]
+    },
+    {
+      "name": "NES Graphics - Part 1",
+      "link": "http://www.dustmop.io/blog/2015/04/28/nes-graphics-part-1/",
+      "description": "Post que muestra como funcionan los gráficos en el Nintendo Entertainment System, una gran ayuda para quienes quieren conocer más sobre lo que hay dentro de las consolas.",
+      "type": "link",
+      "category": "Gráficas computacionales",
+      "tags": ["Gráficas computacionales", "Desarrollo de videojuegos"]
+    },
+    {
+      "name": "Building an Xbox 360 Emulator, part 1: Feasibility/CPU",
+      "link": "http://www.noxa.org/blog/2011/02/23/building-an-xbox-360-emulator-part-1-feasibilitycpu/",
+      "description": "Post que enseña como crear un emulador de Xbox 360 y toda la investigación detrás de ello.",
+      "type": "link",
+      "category": "Gráficas computacionales",
+      "tags": ["Gráficas computacionales", "Desarrollo de videojuegos"]
+    },
+    {
+      "name": "Jason Davies",
+      "link": "https://www.jasondavies.com/",
+      "description": "Página de Jason Davies, muestra muchos ejemplos de como visualizar datos, varios de estos ejemplos son interactivos.",
+      "type": "link",
+      "category": "Gráficas computacionales",
+      "tags": ["Gráficas computacionales", "Visualización de datos"]
+    },
+    {
+      "name": "AwfulMedia",
+      "link": "https://www.youtube.com/user/AwfulMedia/playlists",
+      "description": "Canal que enseña como utilizar Unity desde 0.",
+      "type": "video",
+      "category": "Videos",
+      "tags": ["Youtube", "Videos", "Tutoriales", "Desarollo de videojuegos"]
+    },
+    {
+      "name": "Maze Algorithms",
+      "link": "http://www.jamisbuck.org/mazes/",
+      "description": "Página que enseña como se generan laberintos de manera procedural.",
+      "type": "link",
+      "category": "Post",
+      "tags": ["Páginas", "Post", "Desarrollo de videojuegos"]
+    },
+    {
+      "name": "The Benny Box",
+      "link": "https://www.youtube.com/user/thebennybox",
+      "description": "Canal de desarrollo de videojuegos y software que enseña como hacer juegos en 2D, 3D, implementar física, gráficas computacionales, motores de juegos, entre muchas cosas más, todo esto utilizando C++ o Java.",
+      "type": "video",
+      "category": "Videos",
+      "tags": ["Youtube", "Videos", "Tutoriales", "Desarrollo de videojuegos"]
+    },
+    {
+      "name": "The Best Free Online Resources to Learn Game Development and Gamification",
+      "link": "https://www.springboard.com/blog/free-online-courses-game-development-gamification/",
+      "description": "Listado de recursos similar a este orientado al desarrollo de videojuegos y a <i>Gamification</i>.",
+      "type": "link",
+      "category": "Otros",
+      "tags": ["Páginas", "Listados"]
+    },
+    {
+      "name": "15 Jokes Every Game Developer Can Relate",
+      "link": "http://thelightbulbgames.weebly.com/blog--news/15-jokes-every-game-developer-can-relate",
+      "description": "Página de humor que muestra una serie de cómics asociados al desarrollo de videojuegos.",
+      "type": "link",
+      "category": "Otros",
+      "tags": ["Páginas", "Humor"]
+    },
+    {
+      "name": "A-Frame",
+      "link": "https://aframe.io/",
+      "description": "Framework para crear una página web disponible para realidad virtual.",
+      "type": "link",
+      "category": "Desarrollo de videojuegos",
+      "tags": ["Desarrollo de videojuegos", "Librerías"]
+    },
+    {
+      "name": "How to Write Native Plugins for Unity",
+      "link": "http://www.alanzucconi.com/2015/10/11/how-to-write-native-plugins-for-unity/",
+      "description": "Tutorial que enseña como escribir plugins nativos para Unity, esto es útil si quieres integrar alguna librería en C++ dentro de tu proyecto de Unity.",
+      "type": "link",
+      "category": "Post",
+      "tags": ["Tutoriales"]
+    },
+    {
+      "name": "RTS AI: Problems and Techniques",
+      "link": "http://webdocs.cs.ualberta.ca/~cdavid/pdf/ecgg15_chapter-rts_ai.pdf",
+      "description": "PDF que da una introducción a la inteligencia artificial usada en los RTS.",
+      "type": "pdf",
+      "category": "Otros",
+      "tags": ["Páginas", "Otros", "PDF"]
+    },
+    {
+      "name": "Nintendo Controller Teardown - Part 1",
+      "link": "http://blog.fictiv.com/posts/nintendo-controller-teardown-part-1",
+      "description": "Artículo en el que se muestra como se hace el desarmado de varios controles de Nintendo por si te interesa la parte de Hardware.",
+      "type": "link",
+      "category": "Post",
+      "tags": ["Páginas", "Post"]
+    },
+    {
+      "name": "Books Game Designers Should Read",
+      "link": "https://www.goodreads.com/list/show/4027.Books_Game_Designers_Should_Read#7821348",
+      "description": "Listado de libros que debería de leer un diseñador de videojuegos, dentro de los libros se encuentran libros de videojuegos, juegos, psicología, arquitectura, entre muchos otros más. Sin duda una joya de colección.",
+      "type": "link",
+      "category": "Otros",
+      "tags": ["Páginas", "Listados"]
+    },
+    {
+      "name": "Doing an HD Remake the Right Way",
+      "link": "http://www.fortressofdoors.com/doing-an-hd-remake-the-right-way/",
+      "description": "Artículo que indica como hacer un port de un videojuego RETRO a un videojuego actual, en el artículo se mencionan varias técnicas artísticas para mejorar el proceso de <i>porteo</i>, vale la pena revisar todo el blog.",
+      "type": "link",
+      "category": "Post",
+      "tags": ["Páginas", "Posts"]
+    },
+    {
       "name": "Gamasutra",
       "link": "http://www.gamasutra.com",
       "description": "Sitio con las últimas noticias de los videojuegos, aquí se postea desde noticias de la industria hasta consejos y artículos de los diseñadores de videojuegos. Es uno de los primeros recursos que tienes que seguir si quieres entrar la industria de los videojuegos.",
@@ -117,24 +269,24 @@
       "link": "http://opengameart.org/",
       "description": "Muchos gráficos abiertos que se pueden utilizar en videojuegos de manera gratuita.",
       "type": "link",
-      "category": "Desarrollo de videojuegos",
-      "tags": ["Desarrollo de videojuegos"]
+      "category": "Arte para videojuegos",
+      "tags": ["Arte para videojuegos"]
     },
     {
       "name": "2D Game Art for Programmers",
       "link": "http://2dgameartforprogrammers.blogspot.co.uk/",
       "description": "Sitio que enseña a los desarrolladores como hacer arte para los videojuegos, sin embargo es un buen recurso que puede ser usado por cualquiera.",
       "type": "link",
-      "category": "Desarrollo de videojuegos",
-      "tags": ["Desarrollo de videojuegos"]
+      "category": "Arte para videojuegos",
+      "tags": ["Arte para videojuegos"]
     },
     {
       "name": "Reiner's Tilesets",
       "link": "http://www.reinerstilesets.de/",
       "description": "Sitio con assets gráficos para usar en videojuegos.",
       "type": "link",
-      "category": "Desarrollo de videojuegos",
-      "tags": ["Desarrollo de videojuegos"]
+      "category": "Arte para videojuegos",
+      "tags": ["Arte para videojuegos"]
     },
     {
       "name": "Conceptos de Diseño de videojuegos",

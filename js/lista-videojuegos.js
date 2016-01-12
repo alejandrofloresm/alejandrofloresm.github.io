@@ -9,6 +9,8 @@ $(function() {
       html += '<h4>';
       if (link.type == "video") {
         html += '<i class="fa fa-youtube-play"></i> ';
+      } else if (link.type == "pdf") {
+        html += '<i class="fa fa-file-pdf-o"></i> ';
       }
       html += '<a href="' + link.link + '" target="_blank" class="name">'+ link.name + '</a>';
       html += '</h4>';
