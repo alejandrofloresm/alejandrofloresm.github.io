@@ -1,0 +1,59 @@
+$font_mono: 'Cutive Mono', courier;
+$c_green_sea: #47bb9b;
+$c_emerland: #48cd71;
+$c_nephritis: #3dae5f;
+$c_peter_river: #4698db;
+$c_belize_hole: #3980ba;
+$c_amethyst: #9b58b6;
+$c_wisteria: #8e45ac;
+$c_wet_asphalt: #35495f;
+$c_midnight_blue: #2b3e51;
+$c_night_shade: #23323f;
+$c_sun_flower: #f0c411;
+$c_orange: #f39d12;
+$c_carrot: #e67d21;
+$c_pumpkin: #d35300;
+$c_alizarin: #e64c3b;
+$c_pomegranate: #c0392c;
+$c_clouds: #ecf0f1;
+$c_silver: #bec3c7;
+$c_concrete: #94a5a6;
+$c_asbestos: #7f8c8d;
+$c_sky_blue: #dff5ff;
+
+.row p{
+  margin-bottom: 1em;
+  .r {
+    color: $c_pumpkin;
+    font-family: $font_mono;
+  }
+}
+
+.unity_instruction {
+  background: $c_sky_blue;
+  color: $c_amethyst;
+  font-family: $font_mono;
+  padding: .5em;
+}
+
+.unity_option {
+  background: $c_alizarin;
+  color: $c_clouds;
+  padding: .5em;
+}
+
+.center {
+  text-align: center;
+}
+
+.step {
+  border-bottom: 1px solid $c_silver;
+  .step-content {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}
+
+.container {
+  margin-bottom: 5%;
+}

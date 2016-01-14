@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de Alejandro Flores">
+    <meta name="author" content="Alejandro Flores">
+    <title>Índice de enlaces de videojuegos</title>
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600" 
+      rel="stylesheet"
+      type="text/css">
+    <link 
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" 
+      rel="stylesheet">
+    <link 
+      href='https://fonts.googleapis.com/css?family=Cutive+Mono'
+      rel='stylesheet' 
+      type='text/css'>
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/lessons.css">
+
+    <!-- Javascript 
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="row">
+        <div class="twelve column" style="margin-top:5%;">
+          <h1>Física en Unity</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="twelve column" style="margin-top:5%;">
+          <h2>Parte 1: Agregar un rigidbody</h2>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>1. Crea un nuevo proyecto en Unity con el nombre de CubesProject.</p>
+          <div class="center">
+            <p><span class="unity_instruction">File > New Project</span></p>
+            <p class="image">
+              <img src="02_fisica_img/01.png" alt="">
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>2. Coloca un plano en la escena.</p>
+          <div class="center">
+            <p><span class="unity_instruction">GameObject > 3D Object > Plane</span></p>
+            <p class="video">
+              <iframe width="801" height="410" src="https://www.youtube.com/embed/fv4YRIct5_k" frameborder="0" allowfullscreen></iframe>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>3. Aumenta el tamaño del plano para que su escala sea: (10, 1, 10). Esto lo puedes hacer de dos maneras distintas:</p>
+          <div class="center">
+            <p><span class="unity_option">Opción 1: Modificación del componente.</span></p>
+            <p class="video">
+              <iframe width="801" height="410" src="https://www.youtube.com/embed/MqSGWajjNmM" frameborder="0" allowfullscreen></iframe>
+            </p>
+            <p><span class="unity_option">Opción 2: Escalar el objeto.</span></p>
+            <p class="video">
+              <iframe width="801" height="410" src="https://www.youtube.com/embed/Jnl5gJzeB5I" frameborder="0" allowfullscreen></iframe>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>4. En la ventana <span class="r">Project</span>, crea un folder que se llame <span class="r">Materials</span>, 
+          dentro de la carpeta crea un nuevo material que se llame <span class="r">Grass</span>.</p>
+          <div class="center">
+            <p class="video">
+              <iframe width="801" height="410" src="https://www.youtube.com/embed/PjZApOWkvig" frameborder="0" allowfullscreen></iframe>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>5. Guarda la escena en una carpeta llamada <span class="r">Scenes</span>, guarda la escena con el nombre de <span class="r">Main</span>.</p>
+          <div class="center">
+            <p class="video">
+              <iframe width="801" height="410" src="https://www.youtube.com/embed/NEBmKt1Kttg" frameborder="0" allowfullscreen></iframe>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>6. Cada que modificas la jerarquía de la ventana <span class="r">Project</span> esta modificación se ve reflejada en la jerarquía de archivos del sistema.</p>
+          <div class="center">
+            <p class="image">
+              <img src="02_fisica_img/06.png" alt="">
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>7. Busca en Internet una textura de pasto o prueba con la siguiente textura: <a href="http://bit.ly/textura-pasto">http://bit.ly/textura-pasto</a>.</p>
+          <p>8. Almacena la textura en una carpeta dentro de <span class="r">Materials</span> que se llame <span class="r">Textures</span>.</p>
+          <p>9. Al seleccionarla en Unity, el <span class="r">Inspector</span> te debería de mostrar la información asociada a la textura.</p>
+          <div class="center">
+            <p class="video">
+              <iframe width="801" height="410" src="https://www.youtube.com/embed/PjZApOWkvig" frameborder="0" allowfullscreen></iframe>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>10. Selecciona el material <span class="r">Grass</span>. Con el material mostrándose en el <span class="r">Inspector</span>, arrastra la textura al cuadro en blanco en el atributo <span class="r">Albedo</span>.</p>
+          <div class="center">
+            <p class="video">
+              <iframe width="801" height="410" src="https://www.youtube.com/embed/mMWDdsRpAJY" frameborder="0" allowfullscreen></iframe>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>11. Selecciona el objeto <span class="r">Plane</span> en la ventana <span class="r">Hierarchy</span>, en el componente <span class="r">Mesh Renderer</span>, abre la jerarquía de <span class="r">Materials</span> y en <span class="r">Element 0</span>, arrastra el material <span class="r">Grass</span>.</p>
+          <div class="center">
+            <p class="video">
+              <iframe width="801" height="410" src="https://www.youtube.com/embed/8RN6zG1C3Oc" frameborder="0" allowfullscreen></iframe>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>12. Selecciona el material <span class="r">Grass</span>, posteriormente en los atributos de <span class="r">Main Maps</span>, modifica los valores de <span class="r">Tiling</span> para que sean (10, 10).</p>
+          <div class="center">
+            <p class="video">
+              <iframe width="801" height="410" src="https://www.youtube.com/embed/W_yyRpOlM_M" frameborder="0" allowfullscreen></iframe>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>13. Coloca un par de cubos dentro de la escena de la siguiente manera, así mismo a cada cubo asígnale un material y una textura.</p>
+          <div class="center">
+            <p class="image">
+              <img src="02_fisica_img/13.png" alt="">
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>14. Selecciona todos los cubos y agrégales el componente <span class="r">Rigidbody</span>.</p>
+          <div class="center">
+            <p class="video">
+              <iframe width="801" height="410" src="https://www.youtube.com/embed/DrvSNsrTJvw" frameborder="0" allowfullscreen></iframe>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>15. Presiona <span class="r">Play</span> y observa que sucede en la escena.</p>
+          <div class="center">
+            <p class="video">
+              <iframe width="801" height="410" src="https://www.youtube.com/embed/qi0jaNkKEfE" frameborder="0" allowfullscreen></iframe>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>15. Presiona <span class="r">Play</span> y observa que sucede en la escena.</p>
+          <div class="center">
+            <p class="video">
+              <iframe width="801" height="410" src="https://www.youtube.com/embed/qi0jaNkKEfE" frameborder="0" allowfullscreen></iframe>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- ================================================================= -->
+      <div class="row">
+        <div class="twelve column" style="margin-top:5%;">
+          <h2>Parte 2: Nuestro primer script</h2>
+        </div>
+      </div>
+      
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>1. Crea una carpeta que se llame <span class="r">Scripts</span>.</p>
+          <p>2. Dentro de la carpeta crea un script que se llame <span class="r">Fire</span> (a los scripts también se les conoce como componentes) y que sea del tipo C#.</p>
+          <p>3. Agrega el componente <span class="r">Fire</span> (el que acabas de crear) a la cámara principal (<span class="r">Main Camera</span>) de la escena.</p>
+          <div class="center">
+            <p class="video">
+              <iframe width="520" height="415" src="https://www.youtube.com/embed/nFSKwBjh7NY" frameborder="0" allowfullscreen></iframe>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>4. Abre el componente <span class="r">Fire</span>, esto se hace con doble click sobre el componente <span class="r">Fire</span> en la ventana de <span class="r">Project</span>.</p>
+          <p>5. Este script se abrirá en MonoDevelop, si no lo puedes abrir en MonoDevelop se puede abrir con cualquier editor de textos.</p>
+          <div class="center">
+            <p class="video">
+              <img src="02_fisica_img/02_05.png" alt="">
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>6. Dentro del método <span class="r">Update ( )</span> debes de tener el siguiente código:</p>
+          <div class="center">
+            <script src="https://gist.github.com/alejandrofloresm/fd531e5d4b1c71168fb3.js"></script>
+          </div>
+          <p>7. Guarda el script.</p>
+          <p>8. Ejecuta el juego presionando el botón de <span class="r">Play</span>.</p>
+          <p>Si colocas el mouse sobre la ventana de juego y presionas el botón izquierdo del mouse, se deberían de disparar unas pelotas.</p>
+        </div>
+      </div>
+
+      <!-- ================================================================= -->
+
+      <div class="row">
+        <div class="twelve column" style="margin-top:5%;">
+          <h2>Parte 3: Materiales de física</h2>
+        </div>
+      </div>
+      
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>1. Crea una nueva escena.</p>
+          <p>2. Crea un plano, gira el plano y coloca un cubo arriba del plano.</p>
+          <p>3. Agrega al cubo el componente de <span class="r">Rigidbody</span>.</p>
+          <p>4. Crea un material de física <span class="unity_instruction">Project > Create > Physics Material</span>.</p>
+          <p>5. Selecciona el cubo y arrastra el <span class="r">Physics Material</span> al <span class="r">Box Collider</span> del cubo en su propiedad <span class="r">Material</span>.</p>
+          <p>6. Cambia el <span class="r">Bounciness</span> del material a 1 (<span class="unity_option">Ejecuta la escena</span>).</p>
+          <p>7. Cambia la posición en Y del cubo (<span class="unity_option">Ejecuta la escena</span>).</p>
+          <p>8. Cambia la masa del cubo (<span class="unity_option">Ejecuta la escena</span>).</p>
+          <p>9. Cambia el parámetro <span class="r">Bounce combine</span> a <span class="r">Maximum</span> y verás que el rebote es mayor. ¿Cómo funciona el <span class="r">Bounce combine</span>?</p>
+          <p>10. Ahora coloca todas las variables del material de física 0 y el <span class="r">Friction combine</span> en <span class="r">Minimum</span> (<span class="unity_option">Ejecuta la escena</span>).</p>
+          <div class="center">
+            <div class="image">
+              <img src="02_fisica_img/03_01.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================================================================= -->
+      <div class="row">
+        <div class="twelve column" style="margin-top:5%;">
+          <h2>Referencias:</h2>
+          <p>Byl, P. (2012). Holistic game development with Unity an all-in-one guide to implementing game mechanics, art, design, and programming. Waltham, MA: Focal Press.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html> 
