@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de Alejandro Flores">
+    <meta name="author" content="Alejandro Flores">
+    <title>03 Física en objetos 2D</title>
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600" 
+      rel="stylesheet"
+      type="text/css">
+    <link 
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" 
+      rel="stylesheet">
+    <link 
+      href='https://fonts.googleapis.com/css?family=Cutive+Mono'
+      rel='stylesheet' 
+      type='text/css'>
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/lessons.css">
+
+    <!-- Javascript 
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="row">
+        <div class="twelve column" style="margin-top:5%;">
+          <h1>Física 2D en Unity</h1>
+        </div>
+      </div>
+      
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>1. Descarga el archivo <a href="https://www.dropbox.com/s/xukhr278bp6o1on/platformerArt_v4.zip?dl=0" target="_blank">platformerArt_v4.zip</a>.</p>
+          <p>2. Crea un nuevo proyecto en Unity y selecciona la opción de 2D.</p>
+          <div class="center">
+            <p><span class="unity_instruction">File > New Project</span></p>
+            <p class="image">
+              <img src="03_fisica_2d_img/01.png" alt="">
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>3. Crea una carpeta que se llame <span class="r">Sprites</span>.</p>
+          <p>4. Importa en la carpeta <span class="r">Sprites</span> las siguientes imágenes:</p>
+          <div class="center">
+            <p class="image">
+              <img src="03_fisica_2d_img/04.png" alt="" width="640px">
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>En el caso de que tus imágenes no se hayan manejado como sprites entonces:</p>
+          <p>5. Selecciona <span class="r">block.png</span> dentro de la ventana <span class="r">Project</span> y en el inspector modifica sus propiedades para que cumplan con los siguientes valores:
+          <div class="center">
+            <p class="image">
+              <img src="03_fisica_2d_img/05.png" alt="" width="640px">
+            </p>
+          </div>
+          <div class="code">
+            Texture type = Sprite (2D and UI)
+          </div>
+          <p>6. Realiza lo mismo para las demás texturas.</p>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>7. Arrastra las imágenes de <span class="r">Project</span> a la ventana <span class="r">Hierarchy</span>.</p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/70xP_3XPars?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>8. Duplicando los objetos, replica la siguiente escena:</p>
+          <div class="center">
+            <p class="image">
+              <img src="03_fisica_2d_img/08.png" alt="" width="640px">
+            </p>
+          </div>
+          <p>9. Guarda la escena con el nombre que desees.</p>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>10. Anida todos los objetos <span class="r">block</span> dentro de un objeto vacío <span class="unity_instruction">Game Object > Create Empty</span> con el nombre de <span class="r">Floor</span>.</p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/lIq4T_VXEy4?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>11. Al objeto <span class="r">Floor</span> agrégale un componente que se llama <span class="unity_instruction">BoxCollider2D (Physics2D > BoxCollider2D)</span>.</p>
+          <p>12. Ajusta el <span class="r">Collider</span> para que coincida con el alto y ancho del piso.</p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/XfIqYD5DLwM?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>13. Importa la imagen <span class="r">character > side.png</span>, realiza el mismo proceso que las texturas anteriores</p>.
+          <div class="center">
+            <p class="image">
+              <img src="03_fisica_2d_img/13.png">
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>14. Coloca el <span class="r">sprite</span> en la escena y da click en <span class="unity_instruction">Play</span>.</p>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>15. Agrega al alien (<span class="r">side.png</span>). los componentes de <span class="unity_instruction">Rigidbody 2D</span> y <span class="unity_instruction">Box Collider 2D</span>. Da click en <span class="unity_instruction">Play</span>.</p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/880h0rsiI1Y?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>16. Crea el componente <span class="r">PlayerWalk2D.cs</span> y colócalo en el Alien.</p>
+          <p>17. Dentro del componente modifica el <span class="r">Update</span> para que coincida con lo <a href="https://gist.github.com/alejandrofloresm/79f4ff4cac1ee7294f8b" target="_blank">siguiente</a>:</p>
+          <script src="https://gist.github.com/alejandrofloresm/79f4ff4cac1ee7294f8b.js"></script>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>18. Da click en <span class="unity_instruction">Play</span> y presiona las teclas <i class="fa fa-arrow-left"></i> y <i class="fa fa-arrow-right"></i>.</p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/EFvr1PL_D6w?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>19. Importa la imagen <span class="r">coin_silver.png</span> y sigue el mismo proceso que en los <span class="r">sprites</span> anteriores.</p>
+          <div class="center">
+            <p class="image">
+              <img src="03_fisica_2d_img/19.png" alt="">
+            </p>
+          </div>
+          <p>20. Coloca el <span class="r">sprite</span> en la escena.</p>
+          <p>21. Crea un componente que se llame <span class="r">Bullet2D</span> y agrégalo como componente a <span class="r">coin_silver</span>.</p>
+          <p>22. El componente <span class="r">Bullet2D</span> tiene el <a href="https://gist.github.com/alejandrofloresm/8e25ec3eed31d707f4bd" target="_blank">siguiente código</a>. Presiona <span class="r">Play</span>.</p>
+          <script src="https://gist.github.com/alejandrofloresm/8e25ec3eed31d707f4bd.js"></script>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>23. Crea un <span class="r">prefab</span> con la moneda. Para hacerlo, crea un nuevo folder en tu proyecto con el nombre de <span class="r">Prefabs</span>, después da click derecho sobre el folder y selecciona <span class="unity_instruction">Create > Prefab</span>, coloca de nombre <span class="r">Bullet</span>.</p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/JoyVHu9ch7o?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>24. Arrastra <span class="r">Bullet</span> (o <span class="r">coin_silver</span>) de <span class="unity_instruction">Hierarchy</span> a tu <span class="r">prefab</span></p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/gXDNOe8eW9U?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>25. Crea el componente <span class="r">PlayerShooter2D</span>.</p>
+          <p>26. Adjunta el componente al Alien.</p>
+          <p>27. El contenido del PlayerShooter2D es el <a href="https://gist.github.com/alejandrofloresm/3c9f8534c16a9f5b3195" target="_blank">siguiente</a>:</p>
+          <script src="https://gist.github.com/alejandrofloresm/3c9f8534c16a9f5b3195.js"></script>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>28. Arrastra el prefab <span class="r">Bullet</span> al atributo <span class="r">Bullet Prefab</span> en <span class="r">PlayerShooter2D</span> (del Alien). Da click en <span class="r">Play</span> y observa que sucede al presionar la tecla del mouse.</p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/iCYZw3OjCdw?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <h2>A new challenger appears</h2>
+          <p>Modifica el código para que el personaje cambie su orientación cuando se presiona las flechas <i class="fa fa-arrow-left"></i> y <i class="fa fa-arrow-right"></i>.</p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/jDCUoZocUlQ?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================================================================= -->
+      <div class="row">
+        <div class="twelve column" style="margin-top:5%;">
+          <h2>Referencias:</h2>
+          <p>Byl, P. (2012). Holistic game development with Unity an all-in-one guide to implementing game mechanics, art, design, and programming. Waltham, MA: Focal Press.</p>
+          <p>Platformer Pack Redux. <a href="http://opengameart.org/content/platformer-pack-redux-360-assets" target="_blank">http://opengameart.org/content/platformer-pack-redux-360-assets</a>.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html> 

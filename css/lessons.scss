@@ -44,6 +44,9 @@ $c_sky_blue: #dff5ff;
 
 .center {
   text-align: center;
+  & + p {
+    margin-top: 15px;
+  }
 }
 
 .step {
@@ -56,4 +59,14 @@ $c_sky_blue: #dff5ff;
 
 .container {
   margin-bottom: 5%;
+}
+
+.code {
+  font-family: $font_mono;
+  font-size: 18px;
+  background: $c_clouds;
+  padding: 15px;
+  & + p {
+    margin-top: 15px;
+  }
 }
