@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de Alejandro Flores">
+    <meta name="author" content="Alejandro Flores">
+    <title>04 Animaciones 2D</title>
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600" 
+      rel="stylesheet"
+      type="text/css">
+    <link 
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" 
+      rel="stylesheet">
+    <link 
+      href='https://fonts.googleapis.com/css?family=Cutive+Mono'
+      rel='stylesheet' 
+      type='text/css'>
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/lessons.css">
+
+    <!-- Javascript 
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="row">
+        <div class="twelve column" style="margin-top:5%;">
+          <h1>Animaciones 2D en Unity</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="twelve column" style="margin-top:5%;">
+          <h2>Referencias</h2>
+          <p>Este tutorial sigue los pasos definidos en el siguiente video: <a href="http://unity3d.com/es/learn/tutorials/modules/beginner/2d/2d-controllers?playlist=17093" target="_blank">http://unity3d.com/es/learn/tutorials/modules/beginner/2d/2d-controllers?playlist=17093</a>, sin 
+          embargo se han corregido algunas instrucciones que no estaban claras.</p>
+        </div>
+      </div>
+      
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>1. Descarga los siguientes archivos: <a href="https://www.dropbox.com/s/9esouhc4dsw427t/Prototype_Sprites.zip?dl=0" target="_blank">Prototype_Sprites.zip</a> y <a href="https://www.dropbox.com/s/wkl2z3iiqvngsya/RobotBoy_Sprites.zip?dl=0" target="_blank">RobotBoy_Sprites.zip</a>.</p>
+          <p>2. Crea un nuevo proyecto en Unity y selecciona la opción de 2D.</p>
+          <p>3. Importa los <i>assets</i> de <span class="r">Prototype_Sprites.zip</span> dentro de tu proyecto. Estos <i>assets</i> deberían de estar importadas como texturas de tipo <span class="r">Sprite</span>, si no recuerdas como importarlas de esa manera puedes visitar el tutorial de <a href="03_fisica_2d.html" target="_blank">Física 2D</a> en los pasos <span class="unity_instruction">3 al 7</span>.</p>
+          <p>4. Con estos <i>assets</i> recrea la siguiente escena:</p>
+          <div class="center">
+            <p><span class="unity_instruction">Ambos sprites son <strong>PrototypeGrey16x01</strong> </span></p>
+            <p class="image">
+              <img src="04_animaciones_2d_img/escenario_01.png" alt="">
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>5. Crea un <span class="unity_instruction">Game Object</span> vacío que se llame <span class="r">Character</span>.</p>
+          <p>6. Al <span class="r">Character</span> agregale como componentes Sprite Renderer y Rigidbody 2D.</p>
+          <p>7. Dentro de <span class="unity_instruction">Rigidbody 2D</span> coloca como limitación la rotación en el eje z y el atributo de <span class="unity_instruction">Interpolate</span> con el valor de <span class="r">Interpolate</span>.</p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/y1V789CM60o?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>8. De <span class="r">RobotBoy_Sprites.zip</span> importa la hoja de <span class="r">RobotBoyIdle.png</span>, esta hoja contiene la animación del robot en el estado de Idle.</p>
+          <p>9. Selecciona la hoja dentro de tu ventana <span class="unity_instruction">Project</span> y en el inspector selecciona como <span class="unity_instruction">Texture Type</span>: <span class="r">Sprite (2D and UI)</span> y en <span class="unity_instruction">Sprite Mode</span>: <span class="r">Multiple</span>.</p>
+          <p>10. Posteriormente da click en el botón <span class="unity_instruction">Sprite Editor</span> y se mostrará una nueva ventana, si te pide que apliques los cambios antes de abrir la ventana selecciona aplicar.</p>
+          <p>11. La ventana que se muestra es la ventana del <span class="unity_instruction">Sprite Editor</span>, dentro de esta ventana puedes hacer las modificaciones a los <span class="r">Sprites</span> de tu juego, en el lado superior derecho selecciona <span class="unity_instruction">Slice</span>, esta herramienta te funciona para hacer los cortes de las hojas de <span class="r">Sprites</span>, en <span class="unity_instruction">Type</span> selecciona <span class="r">Grid By Cell Size</span>.</p>
+          <p>12. En <span class="unity_instruction">Pixel Size</span> coloca un tamaño de <span class="r">275 x 275</span>, este valor lo obtienes a partir de la especificación que te da la persona que hizo el arte, el decide el tamaño de cada <span class="r">sprite</span>.</p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/883L6QEitDM?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>13. Selecciona al Game Object <span class="r">Character</span> y arrastra el primer <span class="r">Sprite</span> de la animación <span class="r">RobotBoyIdle_0</span> al atributo <span class="unity_instruction">Sprite</span> del componente <span class="unity_instruction">Sprite Renderer.</span></p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/jptVRfMDTEE?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>14. Agrega al <span class="r">Character</span> los siguientes <span class="unity_instruction">Colliders</span>: a. <span class="unity_instruction">Circle Collider 2D</span> y b. <span class="unity_instruction">Box Collider 2D</span>. Ajusta los <span class="unity_instruction">Colliders</span> para que se muestren como en la siguiente imagen.</p>
+          <div class="center">
+            <p class="image">
+              <img src="04_animaciones_2d_img/colliders_robot_02.png" alt="">
+            </p>
+          </div>
+          <p>15. Al darle click a <span class="unity_instruction">Play</span> notarás que el personaje a traviesa la plataforma, agrega los <span class="unity_instruction">Box Collider 2D</span> a cada una de las plataformas.</p>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>16. Agrega al <span class="r">Character</span> el componente <span class="unity_instruction">Animator</span>, selecciona las siguientes configuraciones para el componente, <span class="unity_instruction">Apply Root Motion</span>: <span class="r">No</span> y <span class="unity_instruction">Update Mode</span>: <span class="r">Animate Physics</span>.</p>
+          <p>17. En la ventana <span class="unity_instruction">Project</span> crea un <i>asset</i> del tipo <span class="unity_instruction">Animator Controller</span>, colocale de nombre <span class="r">CharacterAnimatorController</span>.</p>
+          <p>18. Asigna al componente <span class="unity_instruction">Animator</span> que creaste en el paso 16 el controlador que acabas de crear.</p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/kxsLEOrfvTA?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>19. Al hacer doble click en <span class="r">CharacterAnimatorController</span> verás que se abre la ventana de <span class="unity_instruction">Animator</span>, esta ventana se utiliza para controlar los estados de animación del personaje.</p>
+          <p>20. Con la ventana de <span class="unity_instruction">Animator</span> abierta, abre la ventana de <span class="unity_instruction">Animation</span>. Esta ventana se utiliza para especificar las propiedades de una animación.</p>
+          <p>21. Selecciona a tu personaje <span class="r">Character</span> y da click en el botón <span class="unity_instruction">Create</span>, nombra la animación como <span class="r">Idle</span>. Verás que la animación <span class="r">Idle</span> aparece dentro de la ventana de <span class="unity_instruction">Animator</span>, esto se debe a que <span class="r">Idle</span> se considera como un estado de animación.</p>
+          <p>22. Con la ventana de <span class="unity_instruction">Animation</span> abierta, arrastra los <span class="r">Sprites</span> de <span class="r">RobotBoyIdle_0</span> hasta <span class="r">RobotBoyIdle_29</span> a la ventana de <span class="unity_instruction">Animation</span>.</p>
+          <p>23. El artista que diseño está animación nos indica que es de 24 cuadros por segundo. Ajusta dentro de la ventana de <span class="unity_instruction">Animation</span> las propiedades de los <span class="unity_instruction">Samples</span> a <span class="r">24</span>.</p>
+          <p>24. Presiona <span class="unity_instruction">Play</span> y verás al personaje animado.</p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/Hbc9PcOGSGQ?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>Es posible que en los <span class="r">Sprites</span> del personaje notes algunos <a href="https://es.wikipedia.org/wiki/Artefacto_de_compresi%C3%B3n">artefactos de compresión</a>. Estos aparecen por que Unity está importando la imagen a un menor tamaño y esta aplicando una compresión.</p>
+          <div class="center">
+            <img src="04_animaciones_2d_img/robot_temblor.gif" alt="">
+          </div>
+          <p>Para corregir estos artefactos de compresión, hay que modificar los parámetros de importación de Unity.</p>
+          <p>
+            25. Dentro de la ventana de <span class="unity_instruction">Project</span> selecciona el <span class="r">Sprite sheet</span> (RobotBoyIdle.png) de la animación de <span class="r">Idle</span>.
+          </p>
+          <p>
+            26. Modifica las opciones de importación para que <span class="unity_instruction">Generate Mip Maps</span> este desactivado y el <span class="unity_instruction">Max Size</span> este como <span class="r">2048</span>, presiona <span class="unity_instruction">Apply</span> para que se apliquen los cambios.
+          </p>
+          <div class="center">
+            <img src="04_animaciones_2d_img/disable_mipmaps_compression.png" alt="" style="width:390px;">
+          </div>
+          <div class="center">
+            <img src="04_animaciones_2d_img/robot_sin_temblor.gif" alt="">
+            <p><span class="unity_instruction">Nota: La imagen de arriba es un gif, que por su naturaleza aplica una compresión al contenido, en Unity notarás el cambio de una forma más drástica.</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            27. Agrega la hoja de sprites <span class="r">RobotBoyRun.png</span> y realiza el mismo tratamiento que hiciste de importanción de la hoja de <span class="r">Idle</span>, es decir, cortar los sprites en cuadros de <span class="r">275 x 275</span> y asegurarte de que el tamaño de importanción sea de <span class="r">2048</span> así como deselecciona la opción de generar Mip maps.
+          </p>
+          <p>
+            28. Una vez que se hayan creados los cuadros de sprites, crea una nueva animación utilizando los sprites, el nombre de la animación será <span class="r">Run</span>.
+          </p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/6d_qHcm3ZGg?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            29. Si observas tu ventana del Animator Controller (con el <span class="r">Character</span> seleccionado), podrás notar que aparece el estado de Run. Recuerda que el componente Animator te permite controlar los estados del objeto.
+          </p>
+          <p>
+            30. Ahora estableceremos una conexión del estado <span class="r">Entry</span> al estado de <span class="r">Run</span>, para hacer esto haz click derecho sobre <span class="r">Entry</span>, selecciona <span class="unity_instruction">Make Transition</span> y posteriormente selecciona el estado <span class="r">Run</span>. De esta manera hemos establecido que del estado <span class="r">Entry</span> puedes pasar al estado <span class="r">Run</span>, el estado <span class="r">Entry</span> es el primer estado por el cual pasa el personaje.
+          </p>
+          <p>
+            31. Lo que vamos a hacer es colocar al estado de <span class="r">Run</span> como el estado predeterminado de inicio, para hacerlo, hacemos click derecho sobre el estado <span class="r">Run</span> y seleccionamos <span class="unity_instruction">Set as Layer Default State</span>. Damos click en ejecutar y veremos al personaje corriendo.
+          </p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/qwnyf4B7U60?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            32. Selecciona el estado <span class="r">Idle</span> y conviértelo como el estado predeterminado del personaje.
+          </p>
+          <p>
+            33. Selecciona la flecha de transición de <span class="r">Entry</span> y eliminala, en Mac puedes hacerlo con, Command + Backspace.
+          </p>
+          <div class="center">
+            <img src="04_animaciones_2d_img/delete_arrow.gif" alt="">
+          </div>
+        </div>
+      </div>
+      
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            34. Ahora vamos a crear una transición de <span class="r">Idle</span> a <span class="r">Run</span>.
+          </p>
+          <p>
+            35. Dentro de Unity podemos establecer distintos parámetros para que un objeto pase de una animación a otra, para hacerlo tenemos que agregar parámetros al <span class="unity_instruction">Animator Controller</span>. En la parte izquierda de la ventana del <span class="unity_instruction">Animator Controller</span> podrás ver dos tabs, selecciona el tab de <span class="unity_instruction">Parameters</span> y agrega un parámetro de tipo <span class="unity_instruction">Float</span> con el nombre de <span class="r">Speed</span>.
+          </p>
+          <p>
+            36. Selecciona la trancisión (flecha) que va del estado <span class="r">Idle</span> al estado <span class="r">Run</span>. En el <span class="unity_instruction">Inspector</span>, en la parte inferior podrás encontrar un listado de <span class="unity_instruction">Conditions</span>, agrega una nueva condición en donde el <span class="r">Speed</span> se mayor que <span class="r">0.01</span>. Con esto lo que estamos estableciendo es que cuando el personaje este en el estado <span class="r">Idle</span> y su velocidad sea superior a <span class="r">0.01</span> pase al estado de <span class="r">Run</span>.
+          </p>
+          <p>
+            37. Crea una transición del estado <span class="r">Run</span> al estado <span class="r">Idle</span>, selecciona la transición y coloca como condición que la velocidad se menor que <span class="r">0.01</span>. Esta transición lo que hará es que cuando el personaje deje de moverse regrese al estado <span class="r">Idle</span>.
+          </p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/OME6JW_VG8g?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            38. Lo que ahora vamos hacer es mover al personaje para que aumente su <span class="r">Speed</span> y de esta manera podamos ver que la transición de animaciones se está ejecutando. Crea un componente que se llame <span class="r">RobotCharacterController.cs</span> y adjuntalo al <span class="r">Character</span>.
+          </p>
+          <p>
+            39. En el componente <span class="r">RobotCharacterController.cs</span> debes de tener el <a href="https://gist.github.com/alejandrofloresm/90457a27a86daa0f5334">siguiente código</a>. El código lo que hace es implementar un comportamiento de movimiento similar al que vimos en el tutorial de <a href="03_fisica_2d.html" target="_blank">Física 2D</a>, la diferencia es que en este script el movimiento se está modificando utilizando la propiedad de <span class="r">Velocity</span> del <span class="unity_instruction">Rigidbody 2d</span> (<a href="http://docs.unity3d.com/ScriptReference/Rigidbody2D-velocity.html" target="_blank">Documentación de Rigidbody2D.velocity</a>). Así mismo se establece el valor del <span class="r">Speed</span> del componente <span class="r">Animator Controller</span>.
+          </p>
+          <div class="center">
+            <script src="https://gist.github.com/alejandrofloresm/90457a27a86daa0f5334.js"></script>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>40. Al hacer <span class="unity_instruction">Play</span> tal vez notes que el personaje no pasa a su animación al instante sino que espera a que se termine la animación previa y después se pasa a la que le corresponde.</p>
+          <p>41. Para evitar este problema, seleccionamos cada una de las transiciones <span class="r">Idle -> Run</span> y <span class="r">Run -> Idle</span> y quitamos las opción de <span class="unity_instruction">Has Exit Time</span> y en <span class="unity_instruction">Settings > Transition Duration</span>, lo ponemos en 0.</p>
+          <div class="center">
+            <img src="04_animaciones_2d_img/remove_transition.gif" alt="">
+          </div>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/QJB6eYKIO04?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            42. Ahora lo que vamos a realizar es que el personaje salte y cuando este en el aire se va a ejecutar una animación de estar cayendo o de estar subiendo, <b>Ojo: no es una animación de salto, es una animación de no estar en el suelo (por ejemplo: una caída)</b>.
+            </p>
+          <p>
+            43. Para realizarlo tenemos que agregar a nuestro componente <span class="r">RobotCharacterController.cs</span> las variables <span class="r">bool _grounded (línea 24)</span>, <span class="r">Transform GroundCheck (línea 29)</span>, <span class="r">float _groundRadius (línea 34)</span> y <span class="r">LayerMask WhatIsGround (línea 39)</span>. El script con estás modificaciones puedes consultarlo <a href="https://gist.github.com/alejandrofloresm/d10694baba1e5c994f69">aquí</a>.
+          </p>
+          <p>
+            44. Una vez que hemos creado las variables, en el método <span class="r">FixedUpdate</span> tenemos que revisar si estamos tocando el suelo, para hacer esto tenemos que agregar la siguiente línea <span class="r">_grounded = Physics2D.OverlapCircle(GroundCheck.position, _groundRadius, WhatIsGround); (línea 59)</span>. Este estado tenemos que enviarlo al <span class="r">Animator</span>, para hacerlo agregamos debajo de <span class="r">_grounded = ...</span>, la línea <span class="r">_animator.SetBool("Ground", _grounded); (línea 61)</span>. El script con estás modificaciones puedes consultarlo <a href="https://gist.github.com/alejandrofloresm/d10694baba1e5c994f69">aquí</a>.
+          </p>
+          <div class="center">
+            <script src="https://gist.github.com/alejandrofloresm/d10694baba1e5c994f69.js"></script>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            45. Una vez que ya hicimos las modificaciones en el <span class="r">RobotCharacterController.cs</span> tenemos que agregar un <span class="unity_instruction">GameObject</span> vacío al <span class="r">Character</span>, este <span class="r">GameObject</span> indicará la posición en donde se hará la revisión por la colisión con el suelo.
+          </p>
+          <p>
+            46. Selecciona el <span class="r">Character</span> y en la ventana de <span class="unity_instruction">Hierarchy</span> dale click en <span class="unity_instruction">Create > Create Empty Child</span>.
+          </p>
+          <p>
+            47. Cambia al <span class="r">GameObject</span> su nombre para que sea <span class="r">GroundCheck</span> y en el ícono del cubo a lado del nombre en la ventana del <span class="unity_instruction">Inspector</span>, dale click a la flecha que apunta hacía abajo y selecciona un color, verás que se crea una referencia visual a la posición que tiene el objeto.
+          </p>
+          <p>
+            48. Mueve el <span class="r">GroundCheck</span> de tal manera que quede alíneado a la posición en dónde están los pies del <span class="r">Character</span>.
+          </p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/I6IbVhqqA9I?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            49. Una vez que ya tenemos el <span class="r">GroundCheck</span> en los pies del <span class="r">Character</span> necesitamos establecer en el componente de <span class="r">RobotCharacterController.cs</span> las capas con las cuales va hacer interactuar.
+          </p>
+          <p>
+            50. En la parte superior derecha da click en <span class="unity_instruction">Layers</span> y selecciona <span class="unity_instruction">Edit Layers</span>.
+          </p>
+          <p>
+            51. Agrega una capa que se llame <span class="r">Player</span>.
+          </p>
+          <p>
+            52. Selecciona al <span class="r">Character</span> y en el <span class="unity_instruction">Inspector</span> debajo de su nombre vas a ver un <span class="r">select</span> con el nombre de <span class="unity_instruction">Layer</span> y el valor predeterminado es <span class="r">Default</span>, cambia el valor por <span class="r">Player</span>.
+          </p>
+          <p>
+            53. En el componente <span class="r">RobotCharacterController.cs</span> del <span class="r">Character</span> modifica los valores de <span class="r">WhatIsGround</span> para que el único valor que no este seleccionado sea <span class="r">Player</span>.
+          </p>
+          <p>
+            54. Arrastra el GameObject vacío de <span class="r">GroundCheck</span> al atributo <span class="r">GroundCheck</span>.
+          </p>
+          <p>
+            55. En la ventana del editor del <span class="r">Animator</span> del <span class="r">Personaje</span> agrega el parámetro de <span class="r">Ground</span>.
+          </p>
+          <p>
+            56. Dale <span class="unity_instruction">Play</span> a tu escena y nota que sucede en con el parámetro de <span class="r">Ground</span> en la ventana del <span class="r">Animator</span>.
+          </p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/VQrkVKp-9cA?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            57. Ahora crearemos el código para que el personaje pueda saltar. Abre el código de <span class="r">RobotCharacterController.cs</span> y ve a la línea en dónde se le pasa al <span class="r">Animator</span> el valor de grounded. Debajo envía al <span class="r">Animator</span> el valor del <span class="r">Velocity</span> en el eje y, para hacer esto agrega la siguiente línea. <span class="r">_animator.SetFloat("vSpeed", gameObject.GetComponent&lt;Rigidbody2D&gt;().velocity.y);</span>. El script con estás modificaciones puedes consultarlo <a href="https://gist.github.com/alejandrofloresm/d21d9172383658f32d00" target="_blank">aquí</a>.
+          </p>
+          <p>
+            58. Creamos el método <span class="r">Update</span> en dónde revisamos si el <span class="r">Character</span> está en el suelo y se ha presionado la tecla de la barra espaciadora, si se cumple esta condición entonces le indicamos al <span class="r">Animator</span> que el jugador ya no está en el suelo y agregamos una fuerza al <span class="r">Rigidbody2D</span> en dónde se aumente la fuerza vertical.
+            <code>
+              public float JumpForce = 400;<br>
+              void Update() {<br>
+                if (_grounded &&<br>
+                  Input.GetKeyDown(KeyCode.Space))<br>
+                {<br>
+                  _animator.SetBool("Ground", false);<br>
+                  gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, JumpForce));<br>
+                }<br>
+              }<br>
+            </code>
+            <br>
+            El script con estás modificaciones puedes consultarlo <a href="https://gist.github.com/alejandrofloresm/d21d9172383658f32d00" target="_blank">aquí</a>.
+          </p>
+          <div class="center">
+            <script src="https://gist.github.com/alejandrofloresm/d21d9172383658f32d00.js"></script>
+          </div>
+          <p>Cuando presiones la barra espaciadora deberías de ver al <span class="r">Character</span> saltando</p>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            59. Una vez que ya tenemos el personaje saltando vamos a ponerle sus animaciones de salto. Importa la hoja <span class="r">RobotBoyJump.png</span>, coloca su tamaño de <span class="r">2048</span> y desactiva la generación de los mipmaps, realiza el corte de los sprites con el mismo parámetro que los sprites anteriores, <span class="r">275 x 275</span>.
+          </p>
+          <p>
+            60. Selecciona el personaje y abre la ventana de <span class="r">Animation</span>, en esta ventana crea 11 animaciones con el nombre de <span class="r">Jump_{número de animación}</span>.
+          </p>
+          <p>
+            61. En cada una de las animaciones vas a arrastrar un solo frame del <span class="r">Sprite sheet</span> de <span class="r">RobotBoyJump.png</span>, selecciona tu primera animación y arrastra en ella el frame 5 (considera que empieza con 0) y lo colocas en Jump_1, posteriormente seleccionas el frame 7 y lo arrastras a Jump_2, continuando ese intercalado llena hasta Jump_11.
+          </p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/CqzEMfi-9gY?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            62. Abre el <span class="unity_instruction">Animator Editor</span> del componente <span class="unity_instruction">Animator</span> y notarás que están los 11 estados de las animaciones de <span class="r">Jump</span>. Elimina lo estados.
+          </p>
+          <p>
+            63. En el <span class="unity_instruction">Animator Editor</span> crea un parámetro con el nombre de <span class="r">vSpeed</span>, que es la variable que estabamos enviando desde el componente <span class="r">RobotCharacterController.cs</span>.
+          </p>
+          <p>
+            64. Da click derecho sobre el <span class="unity_instruction">canvas</span> del <span class="unity_instruction">Animator Editor</span> y selecciona <span class="unity_instruction">Create State > From New Blend Tree</span> colocale el nombre de <span class="r">JumpAndFall</span>.
+          </p>
+          <p>
+            65. Crea una transición de <span class="r">Any State</span> a <span class="r">Blend Tree</span>.
+          </p>
+          <p>
+            66. Selecciona la transición y está se va a ejecutar cuando <span class="r">Ground</span> sea <span class="r">false</span>.
+          </p>
+          <p>
+            67. Crea una transición de <span class="r">Blend Tree</span> a <span class="r">Idle</span>.
+          </p>
+          <p>
+            68. La transición se va a ejecutar cuando <span class="r">Ground</span> sea igual a <span class="r">true</span>.
+          </p>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/ScMlWoy5YO8?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            69. Dale doble click al Blend Tree <span class="r">JumpAndFall</span>.
+          </p>
+          <p>
+            70. Selecciona el BlendTree, en el inspector selecciona el <span class="unity_instruction">Blend Type</span> de <span class="r">1D</span>.
+          </p>
+          <p>
+            71. En el listado de <span class="unity_instruction">Motion</span> da click en agregar y selecciona <span class="unity_instruction">Add Motion Field</span>. Agrega 11 <span class="unity_instruction">Motion Fields</span>.
+          </p>
+          <p>
+            72. Arrastra las 11 animaciones que creaste a los <span class="unity_instruction">Motion Fields</span>, empezando por el <span class="r">Jump_11</span> y disminuyendo hasta el <span class="r">Jump_1</span>, de tal manera que el <span class="r">Jump_11</span> tenga como <span class="unity_instruction">Threshold</span> el valor de <span class="r">0</span> y el <span class="r">Jump_1</span> tenga el <span class="unity_instruction">Threshold</span> de <span class="r">1</span>.
+          </p>
+          <p>
+            73. Ahora necesitamos indicarle en que momento va a estar en el punto más alto del salto. Desactivamos el valor de <span class="r">Automate Threshold</span>, posteriormente en la curva de transición (el recuadro azúl que aparece arriba de <span class="r">Motion</span>). Indicamos como valor inferior <span class="r">-10.8</span> y valor superior<span class="r">2.16</span>.
+          </p>
+          <p>
+            74. Finalmente, en el recuadro de <span class="r">Motion</span> colocamos los siguientes valores para los <span class="r">Jump</span>.
+          </p>
+          <div class="center">
+            <table>
+              <tr>
+                <td>Motion</td>
+                <td>Threshold</td>
+              </tr>
+              <tr>
+                <td>Jump_11</td>
+                <td>-10.8</td>
+              </tr>
+              <tr>
+                <td>Jump_10</td>
+                <td>-8.11</td>
+              </tr>
+              <tr>
+                <td>Jump_9</td>
+                <td>-7.13</td>
+              </tr>
+              <tr>
+                <td>Jump_8</td>
+                <td>-6.2</td>
+              </tr>
+              <tr>
+                <td>Jump_7</td>
+                <td>-5.4</td>
+              </tr>
+              <tr>
+                <td>Jump_6</td>
+                <td>-4.6</td>
+              </tr>
+              <tr>
+                <td>Jump_5</td>
+                <td>-3.7</td>
+              </tr>
+              <tr>
+                <td>Jump_4</td>
+                <td>-2.9</td>
+              </tr>
+              <tr>
+                <td>Jump_3</td>
+                <td>-1.7</td>
+              </tr>
+              <tr>
+                <td>Jump_2</td>
+                <td>-0.03</td>
+              </tr>
+              <tr>
+                <td>Jump_1</td>
+                <td>2.16</td>
+              </tr>
+            </table>
+          </div>
+          <div class="center">
+            <iframe width="630" height="473" src="https://www.youtube.com/embed/YdHgoJhLx2Y?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            75. Podrás ver que el personaje salta y cae muy lento, esto se puede corregir modificando la física del mundo, para modificar la física del mundo ve a <span class="r">Edit > Project Settings > Physics 2D</span> y coloca el valor de <span class="r">Gravity</span> en el eje <span class="r">Y</span> con un valor de <span class="r">-30</span>.
+          </p>
+        </div>
+      </div>
+
+      <!-- ================================================================= -->
+      <div class="row">
+        <div class="twelve column" style="margin-top:5%;">
+          <h2>Referencias:</h2>
+          <p>Creación de un controlador para personajes 2D. Obtenido de <a href="http://unity3d.com/es/learn/tutorials/modules/beginner/2d/2d-controllers?playlist=17093" target="_blank">http://unity3d.com/es/learn/tutorials/modules/beginner/2d/2d-controllers?playlist=17093</a></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html> 

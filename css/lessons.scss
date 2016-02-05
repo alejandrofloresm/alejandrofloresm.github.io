@@ -21,25 +21,33 @@ $c_concrete: #94a5a6;
 $c_asbestos: #7f8c8d;
 $c_sky_blue: #dff5ff;
 
-.row p{
+.row p {
   margin-bottom: 1em;
   .r {
     color: $c_pumpkin;
     font-family: $font_mono;
+    font-weight: bold;
+    font-size: 1.1em;
   }
+}
+
+p.image img{
+  width: 100%;
 }
 
 .unity_instruction {
   background: $c_sky_blue;
   color: $c_amethyst;
   font-family: $font_mono;
-  padding: .5em;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 2px 5px;
 }
 
 .unity_option {
   background: $c_alizarin;
   color: $c_clouds;
-  padding: .5em;
+  padding: 2px 5px;
 }
 
 .center {
