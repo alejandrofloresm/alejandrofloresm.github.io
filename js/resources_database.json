@@ -1,6 +1,14 @@
 {
   "links": [
     {
+      "name": "The Big List Of Game Design",
+      "link": "http://www.pixelprospector.com/the-big-list-of-game-design/",
+      "description": "Una excelente colección de más links orientados al diseño de videojuegos y juegos.",
+      "type": "link",
+      "category": "Diseño de videojuegos",
+      "tags": ["Diseño de videojuegos", "Listados"]
+    },
+    {
       "name": "I made an NES emulator. Here’s what I learned about the original Nintendo.",
       "link": "https://medium.com/@fogleman/i-made-an-nes-emulator-here-s-what-i-learned-about-the-original-nintendo-2e078c9b28fe#.pyeycnlz2",
       "description": "Artículo de una persona que desarrollo un emulador de Nintendo, vale la pena ver todo el aprendizaje que tuvo mientras lo desarrollaba.",
