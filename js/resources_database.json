@@ -1,6 +1,14 @@
 {
   "links": [
     {
+      "name": "Game Pitches - Game Design Documents",
+      "link": "http://www.gamepitches.com/game-designs/",
+      "description": "Colección de documentos de diseño de videojuegos.",
+      "type": "link",
+      "category": "Diseño de videojuegos",
+      "tags": ["Diseño de videojuegos", "Listados"]
+    },
+    {
       "name": "The Big List Of Game Design",
       "link": "http://www.pixelprospector.com/the-big-list-of-game-design/",
       "description": "Una excelente colección de más links orientados al diseño de videojuegos y juegos.",
