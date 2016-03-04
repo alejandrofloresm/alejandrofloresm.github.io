@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de Alejandro Flores">
+    <meta name="author" content="Alejandro Flores">
+    <title>Consola de git (v. Bitbucket)</title>
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600" 
+      rel="stylesheet"
+      type="text/css">
+    <link 
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" 
+      rel="stylesheet">
+    <link 
+      href='https://fonts.googleapis.com/css?family=Cutive+Mono'
+      rel='stylesheet' 
+      type='text/css'>
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/lessons.css">
+
+    <!-- Javascript 
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  </head>
+  <body class="consola-wrapper">
+    <div class="container">
+
+      <div class="row">
+        <div class="twelve column" style="margin-top:5%;">
+          <h1>Consola de Git (v. Bitbucket)</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="twelve column">
+          <p>
+            En esta ocasión aprenderás algunos de los comandos básicos de Git, así como algunos comandos de Linux.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="twelve column notification error">
+          <p>
+            Solo para los usuarios de Windows
+          </p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="twelve column">
+          <p>
+            1. Descarga el software Putty de aquí: <a href="http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe">http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe</a>
+          </p>
+          <p>
+            2. Al abrir putty verás la siguiente pantalla:
+          </p>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/putty_1.png" class="width-50">
+            </p>
+          </div>
+          <p>
+            3. Coloca la IP <span class="unity_instruction">104.131.130.64</span> en el campo de <span class="unity_instruction">Host Name</span>
+          </p>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/putty_2.png" class="width-50">
+            </p>
+          </div>
+          <p>
+            4. El sistema te pedirá que aceptes la conexión con el servidor, da click en Si.
+          </p>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/putty_3.png" class="width-50">
+            </p>
+          </div>
+          <p>
+            5. Posteriormente coloca como nombre de usuario tu matrícula
+          </p>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/putty_4.png" class="width-50">
+            </p>
+          </div>
+          <p>
+            6. El sistema te pedirá que ingreses tu contraseña, la contraseña que tienes asignada es <span class="unity_instruction">tec2015</span>.</p>
+          </p>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/putty_5.png" class="width-50">
+            </p>
+          </div>
+          <p>
+            Ahora continúa desde el paso 3 de la siguiente sección. Para los siguientes pasos cuando veas <span class="r">$</span> significa que la instrucción se escribe en la consola (la ventana negra que tienes abierta).
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="twelve column notification error">
+          <p>
+            Termina la parte de los usuarios de Windows
+          </p>
+        </div>
+      </div>
+      
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>0. Para los siguientes pasos cuando veas <span class="r">$</span> significa que la instrucción se escribe en la consola.</p>
+          <p>1. El primer paso consiste en iniciar sesión en la consola, si tienes una computadora con Mac OS X puedes hacerlo abriendo la aplicación "Terminal" (la app viene instalada de fábrica) o si usas Linux solo abre la terminal, dentro de la consola escribe el siguiente comando. Tienes que sustituir <span class="unity_instruction">[tu-matricula]</span> por tu matrícula en minúsculas.</p>
+          <div class="console">
+            <span class="r">$</span> ssh <span class="color-red">[tu-matricula]</span>@104.131.130.64
+          </div>
+          <p>Por ejemplo, suponiendo que tu matrícula es B00984799 entonces el comando quedaría como:</p>
+          <div class="console">
+            <span class="r">$</span> ssh b00984799@104.131.130.64
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+          2. El sistema te pedirá que ingreses tu contraseña, la contraseña que tienes asignada es <span class="unity_instruction">tec2015</span>.</p>
+          <div class="console">
+            <span class="r">$</span> ssh <span class="color-red">[tu-matricula]</span>@104.131.130.64<br>
+            <span class="color-red">[tu-matricula]</span>@104.131.130.64 password: 
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+          3. Una vez que estes a dentro del sistema, revisa el directorio en el que te encuentras, esto puedes hacerlo con el comando <span class="unity_instruction">pwd</span>:
+          </p>
+          <div class="console">
+            <span class="r">$</span> pwd<br>
+            /home/<span class="color-red">[tu-matricula]</span>
+          </div>
+          Esto significa que estás en el directorio <span class="color-red">[tu-matricula]</span> dentro de la carpeta <span class="unity_instruction">/home</span>, es como si en Windows estuvieras dentro de <span class="unity_instruction">C:/Users/MiNombre/Documentos</span>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+          4. Crea un directorio con el nombre de <span class="unity_instruction">hola_mundo_tutorial</span> para hacerlo utiliza el comando <span class="unity_instruction">mkdir</span>.
+          </p>
+          <div class="console">
+            <span class="r">$</span> mkdir hola_mundo_tutorial
+          </div>
+          <p>5. Verifica que el directorio se creó utilizando el comando <span class="unity_instruction">ls</span> con el parámetro <span class="unity_instruction">-l</span>.</p>
+          <div class="console">
+            <span class="r">$</span> ls -l<br>
+            drwxrwxr-x 2 <span class="color-red">[tu-matricula]</span> <span class="color-red">[tu-matricula]</span> 4096 Mar  1 23:36 hola_mundo_tutorial
+          </div>
+          <p>6. Navega al directorio hola_mundo_tutorial, para hacerlo utiliza el comando <span class="unity_instruction">cd</span>.</p>
+          <div class="console">
+            <span class="r">$</span> cd hola_mundo_tutorial
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            7. Crea un archivo de texto, para esto puedes ocupar la aplicacion <span class="r">nano</span>.
+          </p>
+          <div class="console">
+            <span class="r">$</span> nano
+          </div>
+          <p>
+            8. La aplicación <span class="r">nano</span> se abre en la consola, en la primera línea escribe tú matrícula.
+          </p>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/nano_edit.png" alt="">
+            </p>
+          </div>
+          <p>9. Una vez que hayas escrito tu matrícula, presiona <span class="unity_instruction">Ctrl + o</span>, <strong>Nota:</strong> se tiene que presionar la tecla <span class="unity_instruction">Ctrl</span> independientemente si estás en Mac OS X o Windows.</p>
+          <p>10. <span class="unity_instruction">Nano</span> te pedirá que pongas un nombre al archivo, colocale el nombre de <span class="unity_instruction">hola_mundo.txt</span> y presiona enter.</p>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/hola_mundo_txt_nano.png" alt="">
+            </p>
+          </div>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/hola_mundo_out.png" alt="">
+            </p>
+          </div>
+          <p>10. Finalmente presiona <span class="unity_instruction">Ctrl + x</span> para salir de <span class="unity_instruction">Nano</span>.</p>
+          <p>11. Si listas los archivos (<span class="unity_instruction">ls -l</span>) podrás ver que se ha creado el archivo hola_mundo.txt</p>
+          <div class="console">
+            <span class="r">$</span> ls -l <br>
+            -rw-rw-r-- 1 <span class="color-red">[tu-matricula]</span> <span class="color-red">[tu-matricula]</span> 10 Mar  1 23:50 hola_mundo.txt
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>12. Ahora vamos a indicar que esta carpeta es un repositorio git, para hacerlo hay que ejecutar el comando <span class="unity_instruction">git init</span> esto creará una carpeta escondida con el nombre de <span class="unity_instruction">.git</span>, el tener la carpeta <span class="unity_instruction">.git</span> es suficiente para que <span class="unity_instruction">git</span> pueda identificar que ahí se encuentra un repositorio, de ahora en adelante todos los archivos y subcarpetas que se agreguen a esta carpeta (<span class="unity_instruction">hola_mundo_tutorial</span>) podrán agregarse al sistema de versiones.</p>
+          <div class="console">
+            <span class="r">$</span> git init<br>
+            Initialized empty Git repository in /home/<span class="color-red">[tu-matricula]</span>/hola_mundo_tutorial/.git/
+          </div>
+          <p>13. Si listas los archivos ocultos de la carpeta (<span class="unity_instruction">ls -la</span>) podrás ver que se ha creado la carpeta <span class="unity_instruction">.git</span>.</p>
+          <div class="console">
+            <span class="r">$</span> ls -la<br>
+            total 16<br>
+            drwxrwxr-x 3 <span class="color-red">[tu-matricula]</span> <span class="color-red">[tu-matricula]</span> 4096 Mar  1 23:57 .<br>
+            drwxr-xr-x 4 <span class="color-red">[tu-matricula]</span> <span class="color-red">[tu-matricula]</span> 4096 Mar  1 23:36 ..<br>
+            drwxrwxr-x 7 <span class="color-red">[tu-matricula]</span> <span class="color-red">[tu-matricula]</span> 4096 Mar  1 23:57 <span class="color-orange">.git</span><br>
+            -rw-rw-r-- 1 <span class="color-red">[tu-matricula]</span> <span class="color-red">[tu-matricula]</span>   10 Mar  1 23:50 hola_mundo.txt<br>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>14. Ahora vamos agregar el documento que creamos al primer <span class="unity_instruction">commit</span> de nuestro repositorio. Un <span class="unity_instruction">commit</span> es un conjunto de cambios en el repositorio. Lo que nosotros vamos a hacer es indicarle a git que agregué este archivo al conjunto de cambios.<br>
+          Para agregar el archivo utilizamos el comando <span class="unity_instruction">git add [nombre de archivo]</span></p>
+          <div class="console">
+            <span class="r">$</span> git add hola_mundo.txt
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>15. Ahora que ya lo tenemos agregado al conjunto de cambios revisemos cual es el estatus de git, para esto podemos utilizar el comando <span class="unity_instruction">git status</span>.</p>
+          <div class="console">
+            <span class="r">$</span> git status<br>
+            On branch master<br>
+            <br>
+            Initial commit<br>
+            <br>
+            Changes to be committed:<br>
+            &nbsp;&nbsp;(use "git rm --cached &lt;file&gt;..." to unstage)<br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="color-green">new file:   hola_mundo.txt</span><br>
+          </div>
+          <p>Observa que se menciona que se ha agregado un nuevo archivo.</p>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            16. Ahora le indicaremos al sistema que haga el commit, anteriormente solamente le habíamos señalado qué se iba agregar al commit, sin embargo este aún no se ha creado.
+          </p>
+          <p>
+            17. Para agregar el primer commit utiliza el comando <span class="unity_instruction">git commit</span> con el parámetro <span class="r">-m "texto de descripción del commit"</span>.
+          </p>
+          <div class="console">
+            <span class="r">$</span> git commit -m "Se agregó el archivo hola_mundo.txt con los generales de información"<br>
+            *** Please tell me who you are.<br>
+            <br>
+            Run<br>
+            <br>
+            &nbsp;&nbsp;git config --global user.email "you@example.com"<br>
+            &nbsp;&nbsp;git config --global user.name "Your Name"<br>
+            <br>
+            to set your account's default identity.<br>
+            Omit --global to set the identity only in this repository.<br>
+            <br>
+            fatal: empty ident name (for &lt;a00984699@git-practice-delete-after-may.(none)&gt;) not allowed<br>
+          </div>
+          <p>
+            18. El sistema te indicará que falta definir el correo electrónico y tu nombre, para hacerlo ejecuta los comandos <span class="unity_instruction">git config --global user.email "<span class="color-red">Tu correo@correo.com</span>"</span> y <span class="unity_instruction">git config --global user.name "<span class="color-red">Tu nombre</span>"</span>. No olvides que tienes que colocar tu correo electrónico y tu nombre, puedes usar el correo que quieras, por ejemplo:
+          </p>
+          <div class="console">
+            <span class="r">$</span> git config --global user.email "alejandrofloresm@itesm.mx"<br>
+            <span class="r">$</span> git config --global user.name "Alejandro Flores"
+          </div>
+          <p>19. Ahora vuelve a intentar el commit y ya no tendrás problemas.</p>
+          <div class="console">
+            <span class="r">$</span> git commit -m "Se agregó el archivo hola_mundo.txt con los generales de información"<br>
+            [master (root-commit) bde27ac] Se agregó el archivo hola_mundo.txt con los generales de información<br>
+            &nbsp;1 file changed, 1 insertion(+)<br>
+            &nbsp;create mode 100644 hola_mundo.txt<br>
+          </div>
+          <p>20. Si ejecutas el comando <span class="unity_instruction">git status</span> verás que no tienes ningún cambio pendiente.</p>
+          <div class="console">
+            <span class="r">$</span> git status<br>
+            On branch master<br>
+            nothing to commit, working directory clean<br>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <h2>Mini ejercicio</h2>
+          <p>a. Abre de nuevo el documento <span class="r">hola_mundo.txt</span>, puedes usar el comando <span class="unity_instruction">nano hola_mundo.txt</span> y debajo de tu matrícula coloca tu nombre y guarda el documento.</p>
+          <p>b. Agrega el documento al commit.</p>
+          <p>c. Realiza el commit, no olvides colocar un mensaje descriptivo dentro de los valores del parámetro <span class="unity_instruction">-m</span>.</p>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            21. Para ver todos los commits que hemos realizados se puede utilizar el comando <span class="unity_instruction">git log</span>.
+          </p>
+          <div class="console">
+            <span class="r">$</span> git log<br>
+            commit d8cca80c383f5a1f0810de09c6b6e7a773088bd0<br>
+            Author: Alejandro Flores &lt;a00984699@itesm.mx&gt;<br>
+            Date:   Wed Mar 2 00:26:37 2016 -0500<br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Agregu&lt;C3&gt;&lt;A9&gt; mi nombre<br>
+            <br>
+            commit bde27ac9d940cce32079336acee80a69683544f1<br>
+            Author: Alejandro Flores &lt;a00984699@itesm.mx&gt;<br>
+            Date:   Wed Mar 2 00:19:29 2016 -0500<br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Se agreg&lt;C3&gt;&lt;B3&gt; el archivo hola_mundo.txt con los generales de informaci&lt;C3&gt;&lt;B3&gt;n<br>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            22. Ahora vamos a subir nuestro repositorio a <a href="http://bitbucket.org" target="_blank">bitbucket.org</a>, para hacerlo tenemos que agregar nuestras llaves de SSH a bitbucket.
+          </p>
+          <p>
+            23. Para generar la llave ejecuta el siguiente comando <span class="unity_instruction">ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</span>, no olvides sustituir tu correo. En cada entrada de información presiona la tecla <span class="r">Enter</span>, esto le asignará el valor predeterminado.
+          </p>
+          <div class="console">
+            <span class="r">$</span> ssh-keygen -t rsa -b 4096 -C "<span class="color-orange">your_email@example.com</span>"
+            Generating public/private rsa key pair.<br>
+            Enter file in which to save the key (/home/<span class="color-red">[tu-matricula]</span>/.ssh/id_rsa):<span class="color-orange">[Presiona enter]</span><br>
+            Created directory '/home/<span class="color-red">[tu-matricula]</span>/.ssh'.<br>
+            Enter passphrase (empty for no passphrase):<span class="color-orange">[Presiona enter]</span><br>
+            Enter same passphrase again:<span class="color-orange">[Presiona enter]</span><br>
+            Your identification has been saved in /home/<span class="color-red">[tu-matricula]</span>/.ssh/id_rsa.<br>
+            Your public key has been saved in /home/<span class="color-red">[tu-matricula]</span>/.ssh/id_rsa.pub.<br>
+            The key fingerprint is:<br>
+            00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00 <span class="color-orange">your_email@example.com</span><br>
+            The key's randomart image is:<br>
+            +--[ RSA 4096]----+<br>
+            |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+            |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+            |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+            |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+            |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+            |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+            |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+            |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+            |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br>
+            +-----------------+<br>
+          </div>
+          <p>
+            24. Ahora verificaremos que se está ejecutando el proceso ssh-agent:
+          </p>
+          <div class="console">
+            <span class="r">$</span> eval "$(ssh-agent -s)"<br>
+            Agent pid 59566
+          </div>
+          <p>
+            25. Agregamos la llave a nuestro llavero del sistema, para hacerlo ejecuta el siguiente comando:
+          </p>
+          <div class="console">
+            <span class="r">$</span> ssh-add ~/.ssh/id_rsa<br>
+          </div>
+          <p>
+            26. Posteriormente, muestra el contenido de la llave pública, esto lo puedes hacer con el comando <span class="unity_instruction">more</span>:
+          </p>
+          <div class="console">
+            <span class="r">$</span> more ~/.ssh/id_rsa.pub<br>
+            ssh-rsa [unmontondecaracteresrarosquenopuedescompartir<br>
+            unmontondecaracteresrarosquenopuedescompartirconnadied<br>
+            unmontondecaracteresrarosquenopuedescompartirconnadied<br>
+            unmontondecaracteresrarosquenopuedescompartirconnadied<br>
+            unmontondecaracteresrarosquenopuedescompartirconnadied<br>
+            unmontondecaracteresrarosquenopuedescompartirconnadied<br>
+            unmontondecaracteresrarosquenopuedescompartirconnadied<br>
+            unmontondecaracteresrarosquenopuedescompartirconnadied<br>
+            unmontondecaracteresrarosquenopuedescompartirconnadied<br>
+            unmontondecaracteresrarosquenopuedescompartirconnadied<br>
+            unmontondecaracteresrarosquenopuedescompartirconnadied<br>
+            unmontondecaracteresrarosquenopuedescompartirconnadied<br>
+            unmontondecaracteresrarosquenopuedescompartirconnadied<br>
+            unmontondecaracteresrarosquenopue]== your-email@domain<br>
+            .com<br>
+          </div>
+          <p>
+            27. Copia ese contenido con el cursor de tu computadora.
+          </p>
+          <p>
+            28. Ahora en nuestro sistema entramos a <a href="http://bitbucket.org" target="_blank">bitbucket.org</a> creamos una cuenta y posteriormente nos vamos a <span class="unity_instruction">Bitbucket Settings > SSH Keys</span>, selecciona <span class="unity_instruction">New SSH Key</span>.
+          </p>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/bitbucket_1.png" class="">
+            </p>
+          </div>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/bitbucket_2.png" class="">
+            </p>
+            <p>
+              Click en <span class="unity_instruction">Add Key</span>
+            </p>
+          </div>
+          <p>
+            29. De título ponle <span class="r">Servidor remoto</span> y en el campo de <span class="unity_instruction">key</span> coloca el contenido de tu llave pública:
+          </p>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/bitbucket_5.png" class="">
+            </p>
+          </div>
+          <p>
+            30. Finalmente presiona el botón <span class="unity_instruction">Add Key</span>. Podrás ver tu llave listada.
+          </p>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/bitbucket_3.png" class="">
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            31. Ahora en <a href="http://bitbucket.org" target="_blank">bitbucket.org</a> crea un nuevo repositorio de nombre <span class="unity_instruction">hola_mundo_tutorial</span>.
+          </p>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/bitbucket_14.png" class="">
+            </p>
+          </div>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/bitbucket_16.png" class="">
+            </p>
+          </div>
+          <p>
+            32. Una vez que se ha creado el repositorio notarás que la pantalla de <a href="http://bitbucket.org" target="_blank">bitbucket.org</a> te ofrece un par de opciones para subir tus datos, en la sección que dice <strong>I have an existing project</strong>, copia cada una de los comandos y ejecútalos.
+          </p>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/bitbucket_11.png" class="">
+            </p>
+          </div>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/bitbucket_7.png" class="">
+            </p>
+          </div>
+          <div class="console">
+            <span class="r">$</span> git remote add origin git@bitbucket.org:<span class="color-orange">[tu nombre de usuario]</span>/<span class="color-orange">[el nombre de tu repositorio]</span>.git<br>
+            <span class="r">$</span> git push -u origin --all<br>
+            The authenticity of host 'bitbucket.org (192.30.252.129)' can't be established.<br>
+            RSA key fingerprint is 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00.<br>
+            Are you sure you want to continue connecting (yes/no)? <span class="color-orange">[Escribe 'yes' y presiona enter]</span><br>
+            Warning: Permanently added 'bitbucket.org,192.30.252.129' (RSA) to the list of known hosts.<br>
+            Counting objects: 6, done.<br>
+            Compressing objects: 100% (2/2), done.<br>
+            Writing objects: 100% (6/6), 532 bytes | 0 bytes/s, done.<br>
+            Total 6 (delta 0), reused 0 (delta 0)<br>
+            To git@bitbucket.org:<span class="color-orange">[tu nombre de usuario]</span>/<span class="color-orange">[el nombre de tu repositorio]</span>.git<br>
+            &nbsp;* [new branch]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;master -> master<br>
+            Branch master set up to track remote branch master from origin.<br>
+            <span class="r">$</span> git push -u origin --tags<br>
+            Everything up-to-date<br>
+          </div>
+          <p>
+            33. Finalmente, entra al repositorio en <a href="http://bitbucket.org" target="_blank">bitbucket.org</a> y verás que tus cambios ya están listados.
+          </p>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/bitbucket_8.png" class="">
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            34. Entra al repositorio en <a href="http://bitbucket.org" target="_blank">bitbucket.org</a>, selecciona el archivo <span class="unity_instruction">hola_mundo.txt</span> y posteriormente da click en el botón de editar para que puedas realizar una edición, borra la línea con tu nombre y coloca en esa línea la carrera a la que perteneces.
+          </p>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/bitbucket_12.png" class="">
+            </p>
+          </div>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/bitbucket_13.png" class="">
+            </p>
+          </div>
+          <p>
+            35. En la parte inferior dale click en <span class="unity_instruction">Commit</span>. Lo que has realizado es una modificación en el repositorio origen.
+          </p>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            36. En la línea de comandos, abre de nuevo el archivo <span class="unity_instruction">hola_mundo.txt</span> y coloca debajo de tu nombre tu película favorita.
+          </p>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/hola_mundo_3.png" class="">
+            </p>
+          </div>
+          <p>
+            37. Agrega el archivo a tus cambios en git (<span class="unity_instruction">git add</span>) y finalmente realiza un commit (<span class="unity_instruction">git commit -m ""</span>).
+          </p>
+          <div class="console">
+            <span class="r">$</span> git add hola_mundo.txt<br>
+            <span class="r">$</span> git commit -m "Película favorita"<br>
+            [master 6132ffb] Película favorita<br>
+            &nbsp;1 file changed, 1 insertion(+)
+          </div>
+        </div>
+      </div>
+
+      <div class="row step">
+        <div class="twelve column step-content">
+          <p>
+            38. Sube tus cambios al repositorio en <a href="http://bitbucket.org" target="_blank">bitbucket.org</a>, esto lo puedes hacer con el siguiente comando  <span class="unity_instruction">git push origin master</span>.
+          </p>
+          <div class="console">
+            <span class="r">$</span> git push origin master<br>
+            Warning: Permanently added the RSA host key for IP address '192.30.252.128' to the list of known hosts.<br>
+            To git@bitbucket.org:<span class="color-orange">[tu nombre de usuario]</span>/<span class="color-orange">[el nombre de tu repositorio]</span>.git<br>
+            &nbsp;! [rejected]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;master -> master (fetch first)<br>
+            error: failed to push some refs to 'git@bitbucket.org:<span class="color-orange">[tu nombre de usuario]</span>/<span class="color-orange">[el nombre de tu repositorio]</span>.git'<br>
+            hint: Updates were rejected because the remote contains work that you do<br>
+            hint: not have locally. This is usually caused by another repository pushing<br>
+            hint: to the same ref. You may want to first integrate the remote changes<br>
+            hint: (e.g., 'git pull ...') before pushing again.<br>
+            hint: See the 'Note about fast-forwards' in 'git push --help' for details.<br>
+          </div>
+          <p>
+            39. El sistema no te deja subir los cambios debido a que el repositorio de origen (<a href="http://bitbucket.org" target="_blank">bitbucket.org</a>) se encuentra una versión adelante que la tuya, por lo tanto primero tienes que descargar sus cambios y después subir los tuyos.
+          </p>
+          <p>
+            40. Para descargar los cambios utiliza el comando <span class="unity_instruction">git pull</span>.
+          </p>
+          <div class="console">
+            <span class="r">$</span> git pull<br>
+            remote: Counting objects: 3, done.<br>
+            remote: Compressing objects: 100% (2/2), done.<br>
+            remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0<br>
+            Unpacking objects: 100% (3/3), done.<br>
+            From bitbucket.org:<span class="color-orange">[tu nombre de usuario]</span>/<span class="color-orange">[el nombre de tu repositorio]</span><br>
+            &nbsp;&nbsp;d8cca80..d97760a&nbsp;&nbsp;master&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> origin/master<br>
+            Auto-merging hola_mundo.txt<br>
+            CONFLICT (content): Merge conflict in hola_mundo.txt<br>
+            Automatic merge failed; fix conflicts and then commit the result.<br>
+          </div>
+          <p>
+            El sistema te marca que ha habido un conflicto y que no se pudo resolver, para resolver el conflicto tenemos que modificar el archivo con el conflicto.
+          </p>
+          <div class="console">
+            <span class="r">$</span> git pull<br>
+            ...<br>
+            <span class="color-red">CONFLICT (content): Merge conflict in hola_mundo.txt</span><br>
+            <span class="color-red">Automatic merge failed; fix conflicts and then commit the result.</span><br>
+          </div>
+          <p>
+            41. Abre el archivo <span class="unity_instruction">hola_mundo.txt</span>, podrás ver que tiene un contenido similar a este:
+          </p>
+          <div class="console">
+            a00984699<br>
+            <<<<<<< HEAD<br>
+            <span class="color-orange">Alejandro Flores</span><br>
+            <span class="color-orange">Mad Max: Fury Road</span><br>
+            =======<br>
+            <span class="color-green">Licenciatura en Administración de Tecnologías de Información</span><br>
+            >>>>>>> d97760afddb7e6ec13c49d34c3ea9790cbb95ff9<br>
+          </div>
+          <p>
+            Lo que está entre <span class="unity_instruction"><<<<<<< HEAD</span> y <span class="unity_instruction">=======</span> es lo que tienes almacenado en tu repositorio local.
+          </p>
+          <div class="console">
+            <<<<<<< HEAD<br>
+            <span class="color-orange">Alejandro Flores</span><br>
+            <span class="color-orange">Mad Max: Fury Road</span><br>
+            =======<br>
+          </div>
+          <p>
+            Mientras lo que está entre <span class="unity_instruction">=======</span> y <span class="unity_instruction">>>>>>>> d97760afddb7e6ec13c49d34c3ea9790cbb95ff9</span> es lo que está almacenado en el repositorio origen (en este caso, nuestro repositorio origen es lo que está guardado en <a href="http://bitbucket.org" target="_blank">bitbucket.org</a>).
+          </p>
+          <div class="console">
+            =======<br>
+            <span class="color-green">Licenciatura en Administración de Tecnologías de Información</span><br>
+            >>>>>>> d97760afddb7e6ec13c49d34c3ea9790cbb95ff9<br>
+          </div>
+          <p>Git no conoce cuál es la línea correcta, ya sea si la que está en tu repositorio local o bien la de tu repositorio origen, por lo tanto, el trabajo queda en manos de desarrollador.</p>
+          <p>
+            En este caso queremos que el documento tenga lo siguiente: 1. Matrícula, 2. Nombre, 3. Carrera y 4. Película favorita.
+          </p>
+          <p>
+            42. Modifica el documento para que coincida con el requerimiento anterior, recuerda que tienes que eliminar las líneas: <span class="unity_instruction"><<<<<<< HEAD</span>, <span class="unity_instruction">=======</span> y <span class="unity_instruction">>>>>>>> d97760afddb7e6ec13c49d34c3ea9790cbb95ff9</span>.
+          </p>
+          <div class="center">
+            <p class="image">
+              <img src="06_consola_git_img/hola_mundo_4.png" class="">
+            </p>
+          </div>
+          <p>
+            43. Una vez que has almacenado el documento correcto, agrega el archivo a tus cambios en git (<span class="unity_instruction">git add</span>) y finalmente realiza el commit (<span class="unity_instruction">git commit -m ""</span>).
+          </p>
+          <div class="console">
+            <span class="r">$</span> git add hola_mundo.txt<br>
+            <span class="r">$</span> git commit -m "Fix del merge entre los dos archivos"<br>
+            [master d4f6f9d] Fix del merge entre los dos archivos<br>
+          </div>
+          <p>
+            44. Intenta subir de nuevo tus cambios <span class="unity_instruction">git push origin master</span>.
+          </p>
+          <div class="console">
+            <span class="r">$</span> git push origin master<br>
+            Counting objects: 10, done.<br>
+            Compressing objects: 100% (3/3), done.<br>
+            Writing objects: 100% (6/6), 677 bytes | 0 bytes/s, done.<br>
+            Total 6 (delta 0), reused 0 (delta 0)<br>
+            To git@bitbucket.org:<span class="color-orange">[tu nombre de usuario]</span>/<span class="color-orange">[el nombre de tu repositorio]</span>.git<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d97760a..d4f6f9d  master -> master<br>
+          </div>
+          <p>
+            45. Entra a tu repositorio en <a href="http://bitbucket.org" target="_blank">bitbucket.org</a> y podrás ver las modificaciones realizadas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html> 
