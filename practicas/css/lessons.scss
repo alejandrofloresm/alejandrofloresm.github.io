@@ -1,0 +1,139 @@
+$font_mono: 'Cutive Mono', courier;
+$c_green_sea: #47bb9b;
+$c_emerland: #48cd71;
+$c_nephritis: #3dae5f;
+$c_peter_river: #4698db;
+$c_belize_hole: #3980ba;
+$c_amethyst: #9b58b6;
+$c_wisteria: #8e45ac;
+$c_wet_asphalt: #35495f;
+$c_midnight_blue: #2b3e51;
+$c_night_shade: #23323f;
+$c_sun_flower: #f0c411;
+$c_orange: #f39d12;
+$c_carrot: #e67d21;
+$c_pumpkin: #d35300;
+$c_alizarin: #e64c3b;
+$c_pomegranate: #c0392c;
+$c_clouds: #ecf0f1;
+$c_silver: #bec3c7;
+$c_concrete: #94a5a6;
+$c_asbestos: #7f8c8d;
+$c_sky_blue: #dff5ff;
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.row p {
+  margin-bottom: 1em;
+  .r {
+    color: $c_pumpkin;
+    font-family: $font_mono;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+}
+
+p.image img{
+  width: 100%;
+}
+
+.unity_instruction {
+  background: $c_sky_blue;
+  color: $c_amethyst;
+  font-family: $font_mono;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 2px 5px;
+}
+
+.unity_option {
+  background: $c_alizarin;
+  color: $c_clouds;
+  padding: 2px 5px;
+}
+
+.center {
+  text-align: center;
+  & + p {
+    margin-top: 15px;
+  }
+}
+
+.consola-wrapper {
+  .console,
+  .unity_instruction,
+  .unity_option {
+    font-family: $font_mono;
+    font-weight: normal;
+    font-size: 1em;
+    width: 100%;
+    background: $c_night_shade;
+    color: $c_clouds;
+    padding: 15px;
+    margin-bottom: 15px;
+    .r {
+      color: $c_pumpkin;
+    }
+  }
+  .unity_instruction,
+  .unity_option {
+    background: $c_peter_river;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.step {
+  border-bottom: 1px solid $c_silver;
+  .step-content {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}
+
+.container {
+  margin-bottom: 5%;
+}
+
+.code {
+  font-family: $font_mono;
+  font-size: 18px;
+  background: $c_clouds;
+  padding: 15px;
+  & + p {
+    margin-top: 15px;
+  }
+}
+
+.notification {
+  font-size: 22px;
+  margin: 0;
+  text-align: center;
+  padding: 0;
+  vertical-align: middle;
+  &.error {
+    background: $c_alizarin;
+    color: $c_clouds;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.color-red {
+  color: $c_alizarin;
+}
+
+.color-orange {
+  color: $c_orange;
+}
+
+.color-green {
+  color: $c_emerland;
+}
+
+.width-50 {
+  width: 50% !important;
+}
