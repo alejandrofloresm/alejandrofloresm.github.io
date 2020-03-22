@@ -37,7 +37,7 @@ Esta es una lista de extensiones que utilizo en mi instalación de VS Code, en �
 
 Las configuraciones de usuario permiten la customización del editor a tus necesidades. Las configuraciones que yo uso son:
 
-```json
+```javascript
 {
   // Controla el ancho del cursor
   "editor.cursorWidth": 4,
